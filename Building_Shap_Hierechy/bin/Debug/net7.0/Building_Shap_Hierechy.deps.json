@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Building_Shap_Hierechy/1.0.0": {
+        "runtime": {
+          "Building_Shap_Hierechy.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Building_Shap_Hierechy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

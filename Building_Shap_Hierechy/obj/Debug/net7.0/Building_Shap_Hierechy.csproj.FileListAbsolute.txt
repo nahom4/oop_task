@@ -1,0 +1,15 @@
+C:\Users\A\Desktop\Building_Shap_Hierechy\obj\Debug\net7.0\Building_Shap_Hierechy.csproj.AssemblyReference.cache
+C:\Users\A\Desktop\Building_Shap_Hierechy\obj\Debug\net7.0\Building_Shap_Hierechy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\Desktop\Building_Shap_Hierechy\obj\Debug\net7.0\Building_Shap_Hierechy.AssemblyInfoInputs.cache
+C:\Users\A\Desktop\Building_Shap_Hierechy\obj\Debug\net7.0\Building_Shap_Hierechy.AssemblyInfo.cs
+C:\Users\A\Desktop\Building_Shap_Hierechy\obj\Debug\net7.0\Building_Shap_Hierechy.csproj.CoreCompileInputs.cache
+C:\Users\A\Desktop\Building_Shap_Hierechy\bin\Debug\net7.0\Building_Shap_Hierechy.exe
+C:\Users\A\Desktop\Building_Shap_Hierechy\bin\Debug\net7.0\Building_Shap_Hierechy.deps.json
+C:\Users\A\Desktop\Building_Shap_Hierechy\bin\Debug\net7.0\Building_Shap_Hierechy.runtimeconfig.json
+C:\Users\A\Desktop\Building_Shap_Hierechy\bin\Debug\net7.0\Building_Shap_Hierechy.dll
+C:\Users\A\Desktop\Building_Shap_Hierechy\bin\Debug\net7.0\Building_Shap_Hierechy.pdb
+C:\Users\A\Desktop\Building_Shap_Hierechy\obj\Debug\net7.0\Building_Shap_Hierechy.dll
+C:\Users\A\Desktop\Building_Shap_Hierechy\obj\Debug\net7.0\refint\Building_Shap_Hierechy.dll
+C:\Users\A\Desktop\Building_Shap_Hierechy\obj\Debug\net7.0\Building_Shap_Hierechy.pdb
+C:\Users\A\Desktop\Building_Shap_Hierechy\obj\Debug\net7.0\Building_Shap_Hierechy.genruntimeconfig.cache
+C:\Users\A\Desktop\Building_Shap_Hierechy\obj\Debug\net7.0\ref\Building_Shap_Hierechy.dll
