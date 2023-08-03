@@ -1,0 +1,15 @@
+C:\Users\A\Desktop\LibraryCatalog\bin\Debug\net7.0\LibraryCatalog.exe
+C:\Users\A\Desktop\LibraryCatalog\bin\Debug\net7.0\LibraryCatalog.deps.json
+C:\Users\A\Desktop\LibraryCatalog\bin\Debug\net7.0\LibraryCatalog.runtimeconfig.json
+C:\Users\A\Desktop\LibraryCatalog\bin\Debug\net7.0\LibraryCatalog.dll
+C:\Users\A\Desktop\LibraryCatalog\bin\Debug\net7.0\LibraryCatalog.pdb
+C:\Users\A\Desktop\LibraryCatalog\obj\Debug\net7.0\LibraryCatalog.csproj.AssemblyReference.cache
+C:\Users\A\Desktop\LibraryCatalog\obj\Debug\net7.0\LibraryCatalog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\Desktop\LibraryCatalog\obj\Debug\net7.0\LibraryCatalog.AssemblyInfoInputs.cache
+C:\Users\A\Desktop\LibraryCatalog\obj\Debug\net7.0\LibraryCatalog.AssemblyInfo.cs
+C:\Users\A\Desktop\LibraryCatalog\obj\Debug\net7.0\LibraryCatalog.csproj.CoreCompileInputs.cache
+C:\Users\A\Desktop\LibraryCatalog\obj\Debug\net7.0\LibraryCatalog.dll
+C:\Users\A\Desktop\LibraryCatalog\obj\Debug\net7.0\refint\LibraryCatalog.dll
+C:\Users\A\Desktop\LibraryCatalog\obj\Debug\net7.0\LibraryCatalog.pdb
+C:\Users\A\Desktop\LibraryCatalog\obj\Debug\net7.0\LibraryCatalog.genruntimeconfig.cache
+C:\Users\A\Desktop\LibraryCatalog\obj\Debug\net7.0\ref\LibraryCatalog.dll
