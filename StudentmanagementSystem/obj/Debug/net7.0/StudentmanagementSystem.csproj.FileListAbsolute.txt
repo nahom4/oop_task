@@ -1,0 +1,17 @@
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\obj\Debug\net7.0\StudentmanagementSystem.csproj.AssemblyReference.cache
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\obj\Debug\net7.0\StudentmanagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\obj\Debug\net7.0\StudentmanagementSystem.AssemblyInfoInputs.cache
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\obj\Debug\net7.0\StudentmanagementSystem.AssemblyInfo.cs
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\obj\Debug\net7.0\StudentmanagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\bin\Debug\net7.0\StudentmanagementSystem.exe
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\bin\Debug\net7.0\StudentmanagementSystem.deps.json
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\bin\Debug\net7.0\StudentmanagementSystem.runtimeconfig.json
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\bin\Debug\net7.0\StudentmanagementSystem.dll
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\bin\Debug\net7.0\StudentmanagementSystem.pdb
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\obj\Debug\net7.0\StudentmanagementSystem.dll
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\obj\Debug\net7.0\refint\StudentmanagementSystem.dll
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\obj\Debug\net7.0\StudentmanagementSystem.pdb
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\obj\Debug\net7.0\StudentmanagementSystem.genruntimeconfig.cache
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\obj\Debug\net7.0\ref\StudentmanagementSystem.dll
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\A\Desktop\projec_phase_tasks\StudentmanagementSystem\obj\Debug\net7.0\StudentmanagementSystem.csproj.CopyComplete
