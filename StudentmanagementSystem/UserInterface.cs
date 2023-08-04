@@ -5,27 +5,27 @@ class UserInterface
     {
         while(true)
         {
-             Console.WriteLine("Welcome to the Student Management Application");
-        Console.WriteLine("Insert What you want to perform. You can Add,Search and View All Students. Enter xit to exit");
-        string option = Console.ReadLine().Trim().ToLower();
+            Console.WriteLine("Welcome to the Student Management Application");
+            Console.WriteLine("Insert What you want to perform. You can Add,Search and View All Students. Enter xit to exit");
+            string option = Console.ReadLine().Trim().ToLower();
 
-        switch(option)
-        {
-            case "add":
-            AddStudent();
-            break;
+            switch(option)
+            {
+                case "add":
+                AddStudent();
+                break;
 
-            case "search":
-            SearchStudent();
-            break;
+                case "search":
+                SearchStudent();
+                break;
 
-            case "view":
-            ViewStudents();
-            break;
+                case "view":
+                ViewStudents();
+                break;
 
-            case "exit":
-            return;
-        }
+                case "exit":
+                return;
+            }
         }
        
     }

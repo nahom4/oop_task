@@ -29,8 +29,7 @@ public class StudentList<T> where T : Student
     public static void DisplayAllStudents()
     {   
         foreach (T s in Container)
-        {   Console.WriteLine("display students");
-            Console.WriteLine(s);
+        {   
             DisplayStudent(s);
         }
     }
@@ -49,20 +48,20 @@ public class StudentList<T> where T : Student
         Console.WriteLine($"Age -------------------------- {StudentToBeDisplayed.Age}");
         Console.WriteLine($"Roll Number ------------------  {StudentToBeDisplayed.RollNumber}");
         Console.WriteLine($"Grade --------------------------{StudentToBeDisplayed.Grade}");
+        Console.WriteLine("------------------------------------------------");
     }
 
-    public static void SerializeToJsonFile()
+    public static async Task SerializeToJsonFile()
     {   
         string json = JsonConvert.SerializeObject(Container, Formatting.Indented);
-        Console.WriteLine(json);
-        File.WriteAllText(JsonFilePath, json);
+        await File.WriteAllTextAsync(JsonFilePath, json);
     }
 
-    public static void DeserializeFromJsonFile()
+    public static async Task DeserializeFromJsonFile()
     {
         if (File.Exists(JsonFilePath))
         {
-            string jsonData = File.ReadAllText(JsonFilePath);
+            string jsonData = await File.ReadAllTextAsync(JsonFilePath);
             Container = JsonConvert.DeserializeObject<List<T>>(jsonData);
         }
         else

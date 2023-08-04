@@ -1,19 +1,10 @@
 class Driver
 {
-    public static void Main()
+    public static async Task Main()
     {
-    StudentList<Student>.DeserializeFromJsonFile();
-     Student Abebe = new Student("Abebe",21,StudentGrades.A);  
-     StudentList<Student>.AddStudent(Abebe);
+    await StudentList<Student>.DeserializeFromJsonFile();
      UserInterface ui = new UserInterface();
      ui.WelcomePage();
      StudentList<Student>.SerializeToJsonFile();
-
-
-
-
-
-
-
     }
 }

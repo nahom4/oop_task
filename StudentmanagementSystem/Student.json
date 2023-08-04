@@ -1,26 +1,14 @@
 [
   {
-    "Name": null,
-    "Age": 0,
+    "Name": "nahom",
+    "Age": 21,
     "RollNumber": 1,
     "Grade": 0
   },
   {
-    "Name": "Abebe",
-    "Age": 21,
-    "RollNumber": 2,
-    "Grade": 0
-  },
-  {
-    "Name": "nick",
-    "Age": 40,
-    "RollNumber": 3,
-    "Grade": 1
-  },
-  {
     "Name": "jack",
-    "Age": 56,
-    "RollNumber": 4,
+    "Age": 21,
+    "RollNumber": 1,
     "Grade": 0
   }
 ]
