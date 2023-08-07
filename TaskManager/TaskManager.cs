@@ -1,10 +1,49 @@
 using System.Threading.Tasks;
 class TaskHandlerManager
 {
-    string FilePath = "C:/Users/A/Desktop/TaskManager/TaskHandler.csv";
-    List<TaskHandler> TaskHandlerList = new List<TaskHandler>();
+    readonly string FilePath = "TaskHandler.csv";
+    readonly List<TaskHandler> TaskHandlerList = new();
     public void AddTaskHandler(TaskHandler TaskHandlerToBeAdded){
+        var QueryString = from task in TaskHandlerList
+        where task.Name == TaskHandlerToBeAdded.Name
+        select task;
+
+        if (! QueryString.Any())
+        {
         TaskHandlerList.Add(TaskHandlerToBeAdded);
+        }
+    }
+
+    public void UpdateTaskHandler(string Name,string Description,string Catagory,string IsCompleted)
+    {
+        var QueryString = 
+        from task in TaskHandlerList
+        where task.Name == Name
+        select task;
+        
+        if (QueryString.Any())
+        {
+            TaskHandler TaskToBeUpdated = QueryString.First();
+            if (Description != null)
+            {
+                TaskToBeUpdated.Description = Description;  
+            }
+
+            if (Enum.TryParse(Catagory, out TaskHandlerCategory category))
+            {
+                TaskToBeUpdated.Catagory = category;
+            }
+
+            if (bool.TryParse(IsCompleted,out bool isCompleted))
+            {
+                TaskToBeUpdated.IsCompleted = isCompleted;
+            }
+        }
+
+        else
+        {
+            Console.WriteLine("Unable to Update the task");
+        }
     }
 
     public void DisplayTaskHandlers()
@@ -22,36 +61,34 @@ class TaskHandlerManager
 
     public async Task WriteToCsvFile()
     {
-         using (StreamWriter writer = new StreamWriter(FilePath))
-        {   writer.Write("");
-            writer.WriteLine("TaskHandlerName,Category,Description");
+        using StreamWriter writer = new(FilePath);
+        writer.Write("");
+        writer.WriteLine("TaskHandlerName,Category,Description");
 
-            foreach (TaskHandler TaskHandler in TaskHandlerList){
-                await writer.WriteLineAsync($"{TaskHandler.Name},{(int) TaskHandler.Catagory},{TaskHandler.Description},{TaskHandler.IsCompleted}");
+        foreach (TaskHandler TaskHandler in TaskHandlerList)
+        {
+            await writer.WriteLineAsync($"{TaskHandler.Name},{(int)TaskHandler.Catagory},{TaskHandler.Description},{TaskHandler.IsCompleted}");
         }
-        
-    }
     }
 
     public async Task ReadFromCsvFile(){
-        using (StreamReader reader = new StreamReader(FilePath)){
-            while (!reader.EndOfStream)
+        using StreamReader reader = new(FilePath);
+        while (!reader.EndOfStream)
+        {
+            string? line = await reader.ReadLineAsync();
+            string[] values = line!.Split(',');
+
+            if (values.Length >= 4)
             {
-                string? line = await reader.ReadLineAsync();
-                string[] values = line!.Split(',');
+                TaskHandler TaskHandlerObj = new()
+                {
+                    Name = values[0],
+                    Catagory = Enum.TryParse(values[1], out TaskHandlerCategory Category) ? Category : TaskHandlerCategory.Work,
+                    Description = values[2],
+                    IsCompleted = !bool.TryParse(values[3], out bool isComplete) || isComplete
+                };
                 
-                if (values.Length >= 4)
-                {   Enum.TryParse<TaskHandlerCategory>(values[1],out TaskHandlerCategory category);
-                    bool.TryParse(values[3],out bool isComplete);
-                    TaskHandler TaskHandler = new TaskHandler
-                    {
-                        Name = values[0],
-                        Catagory = category,
-                        Description = values[2],
-                        IsCompleted = isComplete
-                    };
-                    TaskHandlerList.Add(TaskHandler);
-                }    
+                TaskHandlerList.Add(TaskHandlerObj);
             }
         }
 

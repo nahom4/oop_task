@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\StudentmanagementSystem.csproj": {}
+    "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\StudentmanagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\StudentmanagementSystem.csproj": {
+    "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\StudentmanagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\StudentmanagementSystem.csproj",
+        "projectUniqueName": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\StudentmanagementSystem.csproj",
         "projectName": "StudentmanagementSystem",
-        "projectPath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\StudentmanagementSystem.csproj",
+        "projectPath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\StudentmanagementSystem.csproj",
         "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\obj\\",
+        "outputPath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -1,7 +1,7 @@
-enum TaskHandlerCategory{
+enum TaskHandlerCategory
+{
     Work,
     Personal,
     Errands,
     BirthDay
-
 }

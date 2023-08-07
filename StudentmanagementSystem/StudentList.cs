@@ -66,8 +66,8 @@ public class StudentList<T> where T : Student
         }
         else
         {
-            Console.WriteLine("JSON file not found. Initializing with an empty list.");
-            Container = new List<T>();
+            Console.WriteLine("JSON file not found. Initializing with an empty list."0);
+            Container =  List<T>();
         }
     }
 }

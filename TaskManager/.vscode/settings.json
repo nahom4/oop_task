@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "Catagory"
-    ]
+    ],
+    "dotnet.defaultSolution": "TaskManager.sln"
 }

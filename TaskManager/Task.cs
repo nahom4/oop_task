@@ -1,9 +1,9 @@
 using System.Reflection;
 class TaskHandler{
-    public required string Name{
+    public  string? Name {
         get;set;
     }
-    public required string Description{
+    public  string? Description {
         get;set;
     }
     public TaskHandlerCategory Catagory{
