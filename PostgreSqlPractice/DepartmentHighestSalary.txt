@@ -1,0 +1,11 @@
+# Write your MySQL query statement below
+# join by the two tables
+# group by departement Id
+# select the row with Max salary
+
+Select Department.name as Department,Employee.name as Employee,Salary
+from Employee join Department  on Employee.departmentId = Department.id
+where (Employee.salary,Employee.departmentId) in
+(select Max(Salary),Employee.departmentId from Employee
+group by Employee.departmentId)
+
