@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using BloggingApplication;
 using Xunit;
 
 namespace BloggingApplication
 {
-    public class PostOpperationTest
+    public class PostOperationTest
     {
         ApplicationContext _Context;
-        PostManager PostManagerInstance;
+        readonly PostManager PostManagerInstance;
         
-        public PostOpperationTest()
+        public PostOperationTest()
         {   
             var options = new DbContextOptionsBuilder<ApplicationContext>()
                 .UseInMemoryDatabase(databaseName: "TestDatabase")
@@ -22,13 +23,13 @@ namespace BloggingApplication
 
         }
         [Fact]
-        public void CanCreatePost()
+        public async Task CanCreatePost()
         {
             // Arrange
-            ClearDatabase();
-            Post TestPost = CreateTestPost(); 
+            await ClearDatabase();
+            Post TestPost = CreateTestPost(1); 
             // Act
-            PostManagerInstance.CreatePost(TestPost);
+            await PostManagerInstance.CreatePost(TestPost);
 
             // Assert
             var createdPost = _Context.Post.FirstOrDefault();
@@ -38,15 +39,15 @@ namespace BloggingApplication
         }
        
         [Fact]      
-        public void CanUpdate()
+        public async Task CanUpdate()
         {
             // Arrange
-            ClearDatabase();
-            Post TestPost = CreateTestPost();
-            _Context.Post.Add(TestPost);
-            _Context.SaveChanges();
+            await  ClearDatabase();
+            Post TestPost = CreateTestPost(2);
+            await _Context.Post.AddAsync(TestPost);
+            await _Context.SaveChangesAsync();
             // Act
-            PostManagerInstance.UpdatePost(new() {Title = "Test Post",Content = "Test Post changed"});
+            await PostManagerInstance.UpdatePost(new() {Title = "Test Post",Content = "Test Post changed"});
 
             // Assert
             var updatedPost = _Context.Post.Where(p => p.Title == "Test Post").First();
@@ -54,44 +55,44 @@ namespace BloggingApplication
             Assert.Equal("Test Post changed", updatedPost.Content);
         }
         [Fact]
-        public void CanDelete()
+        public async Task CanDelete()
         {
             // Arrange
-             ClearDatabase();
-            Post TestPost = CreateTestPost();
-            _Context.Post.Add(TestPost);
-            _Context.SaveChanges();
+             await ClearDatabase();
+            Post TestPost = CreateTestPost(3);
+            await _Context.Post.AddAsync(TestPost);
+            await _Context.SaveChangesAsync();
             // Act
-            PostManagerInstance.DeletePost("Test Post");
+            await PostManagerInstance.DeletePost(3);
 
             // Assert
-            var createdPost = _Context.Post.FirstOrDefault();
+            var createdPost = _Context.Post.Find(3);
             Assert.Null(createdPost);
         }
         [Fact]
-        public void CanGet()
+        public async Task CanGet()
         {
             // Arrange
-            ClearDatabase();
-            Post TestPost = CreateTestPost();
-            _Context.Post.Add(TestPost);
-            _Context.SaveChanges();
+            await ClearDatabase();
+            Post TestPost = CreateTestPost(4);
+            await _Context.Post.AddAsync(TestPost);
+            await _Context.SaveChangesAsync();
             // Act
-            PostManagerInstance.GetPosts();
+            await PostManagerInstance.GetPosts();
             // Assert
             var ReturnedValues = _Context.Post;
             Assert.NotNull(ReturnedValues);
         }
 
-          public void ClearDatabase()
+        internal async Task ClearDatabase()
         {
-            _Context.Post.RemoveRange(_Context.Post);
-            _Context.SaveChanges();
+             _Context.Post.RemoveRange(_Context.Post);
+            await _Context.SaveChangesAsync();
         }
 
-        public static Post CreateTestPost()
+        public static Post CreateTestPost(int Id)
         {
-            return new Post() {PostId = 1,Title = "Test Post",Content = "Test Post Content"};
+            return new Post() {PostId = Id,Title = "Test Post",Content = "Test Post Content"};
         }
     }      
 }

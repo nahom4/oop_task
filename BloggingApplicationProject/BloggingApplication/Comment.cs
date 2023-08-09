@@ -28,7 +28,7 @@ namespace BloggingApplication
 
         public Comment()
         {
-            CreatedAt = DateTime.Now;
+            CreatedAt = DateTime.UtcNow;
         }
     }
 }

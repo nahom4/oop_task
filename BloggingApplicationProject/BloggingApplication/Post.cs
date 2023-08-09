@@ -27,15 +27,11 @@ namespace BloggingApplication
         {
             set;get;
         }
-
         public virtual List<Comment> ListOfComments {set;get;} 
-
         public Post()
         {
             CreatedAt =  DateTime.UtcNow;
             ListOfComments = new List<Comment>();
         }
-
-
     }
 }

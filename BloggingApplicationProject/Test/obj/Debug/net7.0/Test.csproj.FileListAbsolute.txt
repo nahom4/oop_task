@@ -1,4 +1,9 @@
 C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\bin\Debug\net7.0\CoverletSourceRootsMapping
+C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\Test.csproj.AssemblyReference.cache
+C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\Test.AssemblyInfoInputs.cache
+C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\Test.AssemblyInfo.cs
+C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\Test.csproj.CoreCompileInputs.cache
 C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\bin\Debug\net7.0\testhost.dll
 C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\bin\Debug\net7.0\BloggingApplication.deps.json
 C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\bin\Debug\net7.0\BloggingApplication.runtimeconfig.json
@@ -107,11 +112,6 @@ C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\bin\Debug\
 C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\bin\Debug\net7.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\bin\Debug\net7.0\BloggingApplication.dll
 C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\bin\Debug\net7.0\BloggingApplication.pdb
-C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\Test.csproj.AssemblyReference.cache
-C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\Test.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\Test.AssemblyInfoInputs.cache
-C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\Test.AssemblyInfo.cs
-C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\Test.csproj.CoreCompileInputs.cache
 C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\Test.csproj.CopyComplete
 C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\Test.dll
 C:\Users\A\Desktop\projec_phase_tasks\BloggingApplicationProject\Test\obj\Debug\net7.0\refint\Test.dll

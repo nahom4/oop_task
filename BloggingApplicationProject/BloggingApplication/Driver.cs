@@ -7,17 +7,21 @@ namespace BloggingApplication
 {
     public class Driver
     {
-        public static void Main()
+        public static async Task Main()
         {
             using var dbContext = new ApplicationContext();
             dbContext.Database.EnsureCreated(); 
-            Post FirstPost = new(){Title = "Awesome",Content = "This is a cool post"};
+            Post FirstPost = new(){Title = "Work",Content = "This is a cool post"};
             PostManager PostManagerObj = new(dbContext);
-            PostManagerObj.CreatePost(FirstPost);
+            await PostManagerObj.CreatePost(FirstPost);
             CommentManager commentManagerObj = new(dbContext);
-            commentManagerObj.CreateComment(new(){Text = "this is good",PostId = 2});
-            PostManagerObj.DisplayPost("Awesome");
-            PostManagerObj.DisplayPostDetail("Awesome");
+            await commentManagerObj.CreateComment(new(){Text = "this is good",PostId = 6});
+            PostManagerObj.DisplayPost("Work");
+            PostManagerObj.DisplayPostDetail("Work");
+            UserInterface Ui = new(PostManagerObj,commentManagerObj);
+            PostManagerObj.DisplayPostDetail("cool app");
+            
+            await Ui.WelcomePage();
                  
         }
     }

@@ -20,78 +20,76 @@ namespace BloggingApplication
             _Context = new ApplicationContext(options);
             CommentManagerInstance = new(_Context);
             _Context.Post.RemoveRange(_Context.Post);
-            _Context.SaveChanges();
             _Context.Post.Add(new Post() {PostId = 1, Title = "forComment",Content =  "for comment"});
         }
         [Fact]
-        public void CanCreateComment()
+        public async Task CanCreateComment()
         {
             // Arrange
-            ClearDatabase();
-            Comment TestComment = CreateTestComment();
+            await ClearDatabase();
+            Comment TestComment = CreateTestComment(1);
             // Act
-            CommentManagerInstance.CreateComment(TestComment);
+            await CommentManagerInstance.CreateComment(TestComment);
 
             // Assert
-            var createdComment = _Context.Comment.FirstOrDefault();
+            var createdComment = _Context.Comment.Find(1);
             Assert.NotNull(createdComment);
             Assert.Equal("Test Comment", createdComment.Text);
         }
         [Fact]
-        public void CanGet()
+        public async Task CanGet()
         {
             // Arrange
-            ClearDatabase();
-            Comment TestComment = CreateTestComment();
-            _Context.Comment.Add(TestComment); 
-            _Context.SaveChanges();        
+            await ClearDatabase();
+            Comment TestComment = CreateTestComment(2);
+            await _Context.Comment.AddAsync(TestComment); 
             // Act
-            CommentManagerInstance.GetComments();
+            await CommentManagerInstance.GetComments();
             // Assert
-            var ReturnedValues = _Context.Comment;
+            var ReturnedValues = _Context.Comment.Find(2);
             Assert.NotNull(ReturnedValues);
         }
         [Fact]      
-        public void CanUpdate()
+        public async Task CanUpdate()
         {
             // Arrange
-            ClearDatabase();
-            Comment TestComment = CreateTestComment();
-            _Context.Comment.Add(TestComment);
-            _Context.SaveChanges();
+            await ClearDatabase();
+            Comment TestComment = CreateTestComment(3);
+            await _Context.Comment.AddAsync(TestComment);
+            await _Context.SaveChangesAsync();
             string text = "Updated comment";
             // Act
-            CommentManagerInstance.UpdateComment(new Comment {Text = text,CommentId = 1});
+            await CommentManagerInstance.UpdateComment(new Comment {Text = text,CommentId = 3});
 
             // Assert
-            var updatedComment = _Context.Comment.Where(c => c.CommentId == 1).First();
+            var updatedComment = _Context.Comment.Where(c => c.CommentId == 3).First();
             Assert.NotNull(updatedComment);
             Assert.Equal("Updated comment", updatedComment.Text);
         }
         [Fact]
-        public void CanDelete()
+        public async Task CanDelete()
         {
             // Arrange
-            ClearDatabase();
-            Comment TestComment = CreateTestComment();
-            _Context.Comment.Add(TestComment);
-            _Context.SaveChanges();
+            await ClearDatabase();
+            Comment TestComment = CreateTestComment(4);
+            await _Context.Comment.AddAsync(TestComment);
+            await _Context.SaveChangesAsync();
             // Act
-            CommentManagerInstance.DeleteComment(1);
+            await CommentManagerInstance.DeleteComment(4);
             // Assert
-            var createdComment = _Context.Comment.FirstOrDefault();
+            var createdComment = _Context.Comment.Find(4);
             Assert.Null(createdComment);
         }
 
-        public void ClearDatabase()
+        internal async Task ClearDatabase()
         {
             _Context.Comment.RemoveRange(_Context.Comment);
-            _Context.SaveChanges();
+            await _Context.SaveChangesAsync();
         }
 
-        public static Comment CreateTestComment()
+        public static Comment CreateTestComment(int Id)
         {
-            return new Comment() {CommentId = 1,Text = "Test Comment",PostId = 1};
+            return new Comment() {CommentId = Id,Text = "Test Comment",PostId = 1};
         }
     }      
 }

@@ -2,70 +2,97 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace BloggingApplication
 {
     public class CommentManager
     {
-        ApplicationContext _Db;
+        readonly ApplicationContext _Db;
         public CommentManager(ApplicationContext Db)
         {
             _Db = Db;
         }
-        public void CreateComment(Comment CommentToBeAdded)
+        public async Task CreateComment(Comment CommentToBeAdded)
         {   
-            using var transaction = _Db.Database.BeginTransaction();    
             try
             {
-                _Db.Comment.Add(CommentToBeAdded); 
-                _Db.SaveChanges();
-                transaction.Commit();
+                await _Db.Comment.AddAsync(CommentToBeAdded); 
+                await _Db.SaveChangesAsync();
             }
             catch (Exception ex)
-            {
-                transaction.Rollback();
+            {   
+                Console.WriteLine("error");
+                Console.WriteLine(ex.GetBaseException().Message);
                 
             }         
         }
-        public List<Comment> GetComments()
+        public async Task<List<Comment>> GetComments()
         {   
-            return _Db.Comment.ToList();
-        }
-        public void UpdateComment(Comment UpdateInfo)
-        {   
-            var QueryString = from Comment in _Db.Comment where Comment.CommentId == UpdateInfo.CommentId 
-            select Comment;
-            Comment CommentToBeUpdated = QueryString.First();
-
-            if (CommentToBeUpdated != null)
+            try
             {
-                if (CommentToBeUpdated.Text != null)
-                {
-                    CommentToBeUpdated.Text = UpdateInfo.Text;
-                }
-                _Db.SaveChanges();
+
+            return await _Db.Comment.ToListAsync();
             }
 
-            else 
+            catch
             {
-                Console.WriteLine("No such Post Exists");   
-            }             
+                return new List<Comment>();
+            }
         }
-        public void DeleteComment(int Id)
+        public async Task UpdateComment(Comment UpdateInfo)
         {   
-             var QueryString = from comment in _Db.Comment where comment.CommentId == Id select comment;
-             Comment CommentToBeDeleted = QueryString.First();
 
-             if (CommentToBeDeleted != null)
-             {
-                _Db.Comment.Remove(CommentToBeDeleted);
-                _Db.SaveChanges();
-             }
+            try
+            {
 
-             else
-             {
-                Console.WriteLine("No such Post Exists");
-             }
+                Comment? CommentToBeUpdated = await _Db.Comment.FindAsync(UpdateInfo.CommentId);
+
+                if (CommentToBeUpdated != null)
+                {
+                    if (CommentToBeUpdated.Text != null)
+                    {
+                        CommentToBeUpdated.Text = UpdateInfo.Text;
+                    }
+                    await _Db.SaveChangesAsync();
+                }
+
+                else 
+                {
+                    Console.WriteLine("No such Post Exists");   
+                }             
+            }
+
+            catch
+            {
+                Console.WriteLine("Unable to perform Operation");
+            }
+        
+        }
+        public async Task DeleteComment(int Id)
+        {   
+            try
+            {
+
+                var QueryString = from comment in _Db.Comment where comment.CommentId == Id select comment;
+                Comment CommentToBeDeleted = QueryString.First();
+                
+                if (CommentToBeDeleted != null)
+                {
+                    _Db.Comment.Remove(CommentToBeDeleted);
+                    await _Db.SaveChangesAsync();
+                }
+
+                else
+                {
+                    Console.WriteLine("No such Post Exists");
+                }
+            }
+
+            catch
+            {
+                Console.WriteLine("Unable to Delete the comment");
+            }
 
 
         }

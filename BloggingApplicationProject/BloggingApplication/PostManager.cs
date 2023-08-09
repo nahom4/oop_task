@@ -7,73 +7,97 @@ using Microsoft.EntityFrameworkCore;
 namespace BloggingApplication
 {
     public class PostManager
-    {   
-       ApplicationContext _Db;
+    {
+        readonly ApplicationContext _Db;
         public PostManager(ApplicationContext Db)
         {
             _Db = Db;
         }
-        public void CreatePost(Post PostToBeAdded)
+        public async Task CreatePost(Post PostToBeAdded)
         {   
-            using var transaction = _Db.Database.BeginTransaction();
             try
             {
             Post PostInDb = _Db.Post.Where(p  => p.Title == PostToBeAdded.Title).FirstOrDefault()!;
                 if (PostInDb == null)
                 {
-                    _Db.Post.Add(PostToBeAdded); 
-                    _Db.SaveChanges();
-                    transaction.Commit();
+                    await _Db.Post.AddAsync(PostToBeAdded); 
+                    await _Db.SaveChangesAsync();
                 }
             }
             catch (Exception ex)
             {
-                transaction.Rollback();
+                Console.WriteLine(ex.Message);
             }         
         }
-        public List<Post> GetPosts()
+        public async Task<List<Post>> GetPosts()
         {   
-            return _Db.Post.ToList();
+            try
+            {
+                return await _Db.Post.ToListAsync();
+            }
+
+            catch
+            {
+                return new List<Post>();
+            }
         }
-        public void UpdatePost(Post UpdateInfo)
+        public async Task UpdatePost(Post UpdateInfo)
         {   
             
-            var QueryString = from post in _Db.Post where post.Title == UpdateInfo.Title select post;
-            Post PostToBeUpdated = QueryString.First();
-
-            if (PostToBeUpdated != null)
+            try
             {
-                if (PostToBeUpdated.Title != null)
-                {
-                    PostToBeUpdated.Title = UpdateInfo.Title;
-                }
 
-                if (PostToBeUpdated.Content != null)
-                {
-                    PostToBeUpdated.Content = UpdateInfo.Content;
-                }
-                _Db.SaveChanges();
-            } 
+                var QueryString = from post in _Db.Post where post.Title == UpdateInfo.Title select post;
+                Post PostToBeUpdated = QueryString.First();
 
-            else
+                if (PostToBeUpdated != null)
+                {
+                    if (PostToBeUpdated.Title != null)
+                    {
+                        PostToBeUpdated.Title = UpdateInfo.Title;
+                    }
+
+                    if (PostToBeUpdated.Content != null)
+                    {
+                        PostToBeUpdated.Content = UpdateInfo.Content;
+                    }
+                    await _Db.SaveChangesAsync();
+                } 
+
+                else
+                {
+                    Console.WriteLine("The entered post doesn't exist");
+                }
+            }
+
+            catch
             {
-                Console.WriteLine("The entered post doesn't exist");
+                Console.WriteLine("Unable to Update Posts");
             }
 
         }
-        public void DeletePost(string Title)
+        public async Task DeletePost(int Id)
         {   
-             var QueryString = from post in _Db.Post where post.Title == Title select post;
-             Post PostToBeDeleted = QueryString.First();
 
-             if (PostToBeDeleted != null)
+            try
             {
-                _Db.Post.Remove(PostToBeDeleted);
-                _Db.SaveChanges();
+                var QueryString = from post in _Db.Post where post.PostId == Id select post;
+                Post PostToBeDeleted = QueryString.First();
+
+                if (PostToBeDeleted != null)
+                {
+                    _Db.Post.Remove(PostToBeDeleted);
+                    await _Db.SaveChangesAsync();
+                }
+                else
+                {
+                    Console.WriteLine("The entered post doesn't exist");
+                }
             }
-            else
+
+            catch
             {
-                Console.WriteLine("The entered post doesn't exist");
+                Console.WriteLine("Unable to Delete Posts");
             }
         }  
 
@@ -90,30 +114,47 @@ namespace BloggingApplication
         }
         public void DisplayPost(string Title) 
         {
-             var QueryString = from post in _Db.Post where post.Title == Title select post;
-             if(QueryString != null)
+             
+             try
              {
-                Post PostToBeDisplayed = QueryString.First();
-                PrintPost(PostToBeDisplayed);
+                var QueryString = from post in _Db.Post where post.Title == Title select post;
+                if(QueryString != null)
+                {
+                    Post PostToBeDisplayed = QueryString.First();
+                    PrintPost(PostToBeDisplayed);
+                }
+                
+                else
+                {
+                    Console.WriteLine("No posts here");
+                }
              }
-            
-            else
-            {
-                Console.WriteLine("No posts here");
-            }
+
+             catch
+             {
+                Console.WriteLine("No Posts to Display");
+             }
         }   
 
         public void DisplayPostDetail(string Title)
         {
-            var QueryString = from post in _Db.Post where post.Title == Title select post;
-            if(QueryString != null)
+            try
             {
-                Post PostToBeDisplayed = QueryString.First();
-                
-                foreach(Comment comment in PostToBeDisplayed.ListOfComments)
+                var QueryString = from post in _Db.Post where post.Title == Title select post;
+                if(QueryString != null)
                 {
-                    PrintComment(comment);
-                }    
+                    Post PostToBeDisplayed = QueryString.First();
+                    
+                    foreach(Comment comment in PostToBeDisplayed.ListOfComments)
+                    {
+                        PrintComment(comment);
+                    }    
+                }
+            }
+
+            catch
+            {
+                Console.WriteLine("Unable to display details");
             }
 
         }
