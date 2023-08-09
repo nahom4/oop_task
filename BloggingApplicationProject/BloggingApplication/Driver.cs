@@ -18,8 +18,6 @@ namespace BloggingApplication
             commentManagerObj.CreateComment(new(){Text = "this is good",PostId = 2});
             PostManagerObj.DisplayPost("Awesome");
             PostManagerObj.DisplayPostDetail("Awesome");
-
-
                  
         }
     }

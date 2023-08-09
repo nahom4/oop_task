@@ -25,55 +25,73 @@ namespace BloggingApplication
         public void CanCreatePost()
         {
             // Arrange
-            Post first = new(){Title = "school",Content = "Content"};
+            ClearDatabase();
+            Post TestPost = CreateTestPost(); 
             // Act
-            PostManagerInstance.CreatePost(first);
+            PostManagerInstance.CreatePost(TestPost);
 
             // Assert
             var createdPost = _Context.Post.FirstOrDefault();
             Assert.NotNull(createdPost);
-            Assert.Equal("school", createdPost.Title);
-            Assert.Equal("Content", createdPost.Content);
+            Assert.Equal("Test Post", createdPost.Title);
+            Assert.Equal("Test Post Content", createdPost.Content);
         }
        
         [Fact]      
         public void CanUpdate()
         {
             // Arrange
-            Post first = new(){Title = "work",Content = "work Content"};
-            _Context.Post.Add(first);
+            ClearDatabase();
+            Post TestPost = CreateTestPost();
+            _Context.Post.Add(TestPost);
+            _Context.SaveChanges();
             // Act
-            PostManagerInstance.UpdatePost(new() {Title = "work",Content = "Content changed"});
+            PostManagerInstance.UpdatePost(new() {Title = "Test Post",Content = "Test Post changed"});
 
             // Assert
-            var updatedPost = _Context.Post.Where(p => p.Title == "work").First();
+            var updatedPost = _Context.Post.Where(p => p.Title == "Test Post").First();
             Assert.NotNull(updatedPost);
-            Assert.Equal("Content changed", updatedPost.Content);
+            Assert.Equal("Test Post changed", updatedPost.Content);
         }
         [Fact]
         public void CanDelete()
         {
             // Arrange
-            Post first = new(){Title = "work",Content = "work Content"};
-            _Context.Post.Add(first);
+             ClearDatabase();
+            Post TestPost = CreateTestPost();
+            _Context.Post.Add(TestPost);
+            _Context.SaveChanges();
             // Act
-            PostManagerInstance.DeletePost("work");
+            PostManagerInstance.DeletePost("Test Post");
 
             // Assert
-            var createdPost = _Context.Post.Where(p => p.Title == "work").First();
+            var createdPost = _Context.Post.FirstOrDefault();
             Assert.Null(createdPost);
         }
         [Fact]
         public void CanGet()
         {
             // Arrange
-            Post first = new(){Title = "work",Content = "work Content"};
-            _Context.Post.Add(first);
+            ClearDatabase();
+            Post TestPost = CreateTestPost();
+            _Context.Post.Add(TestPost);
+            _Context.SaveChanges();
             // Act
             PostManagerInstance.GetPosts();
             // Assert
             var ReturnedValues = _Context.Post;
-            Assert.Null(ReturnedValues);
+            Assert.NotNull(ReturnedValues);
+        }
+
+          public void ClearDatabase()
+        {
+            _Context.Post.RemoveRange(_Context.Post);
+            _Context.SaveChanges();
+        }
+
+        public static Post CreateTestPost()
+        {
+            return new Post() {PostId = 1,Title = "Test Post",Content = "Test Post Content"};
         }
     }      
 }

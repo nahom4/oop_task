@@ -12,10 +12,10 @@ namespace BloggingApplication
         public ApplicationContext(DbContextOptions options) : base(options){}
         public virtual DbSet<Post> Post { set; get;}
         public virtual DbSet<Comment> Comment { set; get;}
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Username=postgres;Password=nahom;Database=bloggingapplicationdb;");
-        }
+        // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        // {
+        //     optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Username=postgres;Password=nahom;Database=bloggingapplicationdb;");
+        // }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

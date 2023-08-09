@@ -19,57 +19,79 @@ namespace BloggingApplication
                 .Options;
             _Context = new ApplicationContext(options);
             CommentManagerInstance = new(_Context);
+            _Context.Post.RemoveRange(_Context.Post);
+            _Context.SaveChanges();
             _Context.Post.Add(new Post() {PostId = 1, Title = "forComment",Content =  "for comment"});
-            Comment first = new(){Text = "Text",PostId = 1};
-            CommentManagerInstance.CreateComment(first);
         }
         [Fact]
         public void CanCreateComment()
         {
             // Arrange
-            Comment first = new(){Text = "Text",PostId = 1};
+            ClearDatabase();
+            Comment TestComment = CreateTestComment();
             // Act
-            CommentManagerInstance.CreateComment(first);
+            CommentManagerInstance.CreateComment(TestComment);
 
             // Assert
             var createdComment = _Context.Comment.FirstOrDefault();
             Assert.NotNull(createdComment);
-            Assert.Equal("school", createdComment.Text);
+            Assert.Equal("Test Comment", createdComment.Text);
         }
         [Fact]
         public void CanGet()
         {
             // Arrange
+            ClearDatabase();
+            Comment TestComment = CreateTestComment();
+            _Context.Comment.Add(TestComment); 
+            _Context.SaveChanges();        
             // Act
             CommentManagerInstance.GetComments();
             // Assert
             var ReturnedValues = _Context.Comment;
-            Assert.Null(ReturnedValues);
+            Assert.NotNull(ReturnedValues);
         }
         [Fact]      
         public void CanUpdate()
         {
             // Arrange
-            int Id = 1;
-            string text = "updated comment";
+            ClearDatabase();
+            Comment TestComment = CreateTestComment();
+            _Context.Comment.Add(TestComment);
+            _Context.SaveChanges();
+            string text = "Updated comment";
             // Act
             CommentManagerInstance.UpdateComment(new Comment {Text = text,CommentId = 1});
 
             // Assert
-            var updatedComment = _Context.Comment.Where(c => c.CommentId == Id).First();
+            var updatedComment = _Context.Comment.Where(c => c.CommentId == 1).First();
             Assert.NotNull(updatedComment);
-            Assert.Equal("updated comment", updatedComment.Text);
+            Assert.Equal("Updated comment", updatedComment.Text);
         }
         [Fact]
         public void CanDelete()
         {
             // Arrange
-            int Id = 1;
+            ClearDatabase();
+            Comment TestComment = CreateTestComment();
+            _Context.Comment.Add(TestComment);
+            _Context.SaveChanges();
             // Act
-            CommentManagerInstance.DeleteComment(Id);
+            CommentManagerInstance.DeleteComment(1);
             // Assert
-            var createdComment = _Context.Comment.Where(c => c.CommentId == Id).First();
+            var createdComment = _Context.Comment.FirstOrDefault();
             Assert.Null(createdComment);
+        }
+
+        public void ClearDatabase()
+        {
+            _Context.Comment.RemoveRange(_Context.Comment);
+            _Context.SaveChanges();
+        }
+
+        public static Comment CreateTestComment()
+        {
+            return new Comment() {CommentId = 1,Text = "Test Comment",PostId = 1};
         }
     }      
 }
