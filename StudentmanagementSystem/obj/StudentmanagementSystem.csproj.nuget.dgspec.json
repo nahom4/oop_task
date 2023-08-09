@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\StudentmanagementSystem.csproj": {}
+    "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentManagementSystemProject\\StudentmanagementSystem\\StudentmanagementSystem.csproj": {}
   },
   "projects": {
-    "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\StudentmanagementSystem.csproj": {
+    "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentManagementSystemProject\\StudentmanagementSystem\\StudentmanagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\StudentmanagementSystem.csproj",
+        "projectUniqueName": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentManagementSystemProject\\StudentmanagementSystem\\StudentmanagementSystem.csproj",
         "projectName": "StudentmanagementSystem",
-        "projectPath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\StudentmanagementSystem.csproj",
+        "projectPath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentManagementSystemProject\\StudentmanagementSystem\\StudentmanagementSystem.csproj",
         "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentmanagementSystem\\obj\\",
+        "outputPath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\StudentManagementSystemProject\\StudentmanagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",

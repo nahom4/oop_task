@@ -51,12 +51,12 @@ class UserInterface
     public void SearchStudent()
     {
         Console.WriteLine("You can search either by Id or Name");
-        string SearchOption = Console.ReadLine().Trim().ToLower();
+        string SearchOption = Console.ReadLine()!.Trim().ToLower();
 
         if(SearchOption == "id")
         {   
             Console.WriteLine("ID : ");
-            int Id = int.Parse(Console.ReadLine()); 
+            int Id = int.Parse(Console.ReadLine()!); 
             DisplayGroupOfStudents = StudentList<Student>.SelectStudentsById(Id);
             StudentList<Student>.DisplayGroupOfStudents(DisplayGroupOfStudents);
 
@@ -65,7 +65,7 @@ class UserInterface
         if(SearchOption == "name")
         {
             Console.WriteLine("Name : ");
-            string Name = Console.ReadLine();
+            string Name = Console.ReadLine()!;
             DisplayGroupOfStudents= StudentList<Student>.SelectStudentsByName(Name);
             Console.WriteLine(DisplayGroupOfStudents[0]);
             StudentList<Student>.DisplayGroupOfStudents(DisplayGroupOfStudents);
