@@ -14,16 +14,16 @@ namespace BloggingApplication
         }
         public void CreateComment(Comment CommentToBeAdded)
         {   
-            // using var transaction = _Db.Database.BeginTransaction();    
+            using var transaction = _Db.Database.BeginTransaction();    
             try
             {
                 _Db.Comment.Add(CommentToBeAdded); 
                 _Db.SaveChanges();
-                // transaction.Commit();
+                transaction.Commit();
             }
             catch (Exception ex)
             {
-                // transaction.Rollback();
+                transaction.Rollback();
                 
             }         
         }

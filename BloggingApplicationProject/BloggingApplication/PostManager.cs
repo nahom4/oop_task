@@ -15,7 +15,7 @@ namespace BloggingApplication
         }
         public void CreatePost(Post PostToBeAdded)
         {   
-            // using var transaction = _Db.Database.BeginTransaction();
+            using var transaction = _Db.Database.BeginTransaction();
             try
             {
             Post PostInDb = _Db.Post.Where(p  => p.Title == PostToBeAdded.Title).FirstOrDefault()!;
@@ -23,12 +23,12 @@ namespace BloggingApplication
                 {
                     _Db.Post.Add(PostToBeAdded); 
                     _Db.SaveChanges();
-                    // transaction.Commit();
+                    transaction.Commit();
                 }
             }
             catch (Exception ex)
             {
-                // transaction.Rollback();
+                transaction.Rollback();
             }         
         }
         public List<Post> GetPosts()
