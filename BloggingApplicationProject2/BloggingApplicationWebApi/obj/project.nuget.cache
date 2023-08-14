@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qu9uEPXHFwi1eYNGZ94zEo21N9KA6bpOfm9agbR7/TCvfKx5i3V/nj1r128OoWSJYNxyTguk+VTDlWJxa4aXfQ==",
+  "dgSpecHash": "lKY2AWa+/7wCQ8cShK50nJbACQvSQ0Jq8GnRa5c+sZUaYQBFBanvQKX7i8t+FtRmRstXFcd9D3uUuqzA13j1Rg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\BloggingApplicationProject2\\BloggingApplicationWebApi\\BloggingApplicationWebApi.csproj",
+  "projectFilePath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\BloggingApplicationProject2\\BloggingApplicationWebApi\\BloggingApplicationWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\A\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\A\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

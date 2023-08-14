@@ -1,0 +1,15 @@
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\obj\Debug\net7.0\CleanArchBloggingApp.csproj.AssemblyReference.cache
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\obj\Debug\net7.0\CleanArchBloggingApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\obj\Debug\net7.0\CleanArchBloggingApp.AssemblyInfoInputs.cache
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\obj\Debug\net7.0\CleanArchBloggingApp.AssemblyInfo.cs
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\obj\Debug\net7.0\CleanArchBloggingApp.csproj.CoreCompileInputs.cache
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\bin\Debug\net7.0\CleanArchBloggingApp.exe
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\bin\Debug\net7.0\CleanArchBloggingApp.deps.json
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\bin\Debug\net7.0\CleanArchBloggingApp.runtimeconfig.json
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\bin\Debug\net7.0\CleanArchBloggingApp.dll
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\bin\Debug\net7.0\CleanArchBloggingApp.pdb
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\obj\Debug\net7.0\CleanArchBloggingApp.dll
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\obj\Debug\net7.0\refint\CleanArchBloggingApp.dll
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\obj\Debug\net7.0\CleanArchBloggingApp.pdb
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\obj\Debug\net7.0\CleanArchBloggingApp.genruntimeconfig.cache
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingApp\obj\Debug\net7.0\ref\CleanArchBloggingApp.dll

@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\A\\Desktop\\projec_phase_tasks\\BloggingApplicationProject2\\BloggingApplicationWebApi\\BloggingApplicationWebApi.csproj": {}
+    "c:\\Users\\A\\Desktop\\projec_phase_tasks\\BloggingApplicationProject2\\BloggingApplicationWebApi\\BloggingApplicationWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\A\\Desktop\\projec_phase_tasks\\BloggingApplicationProject2\\BloggingApplicationWebApi\\BloggingApplicationWebApi.csproj": {
+    "c:\\Users\\A\\Desktop\\projec_phase_tasks\\BloggingApplicationProject2\\BloggingApplicationWebApi\\BloggingApplicationWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\BloggingApplicationProject2\\BloggingApplicationWebApi\\BloggingApplicationWebApi.csproj",
+        "projectUniqueName": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\BloggingApplicationProject2\\BloggingApplicationWebApi\\BloggingApplicationWebApi.csproj",
         "projectName": "BloggingApplicationWebApi",
-        "projectPath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\BloggingApplicationProject2\\BloggingApplicationWebApi\\BloggingApplicationWebApi.csproj",
+        "projectPath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\BloggingApplicationProject2\\BloggingApplicationWebApi\\BloggingApplicationWebApi.csproj",
         "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\BloggingApplicationProject2\\BloggingApplicationWebApi\\obj\\",
+        "outputPath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\BloggingApplicationProject2\\BloggingApplicationWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
