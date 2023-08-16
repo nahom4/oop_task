@@ -1,8 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "0pxExg2vvrQ/h1ZjIzTUzsrIlitnMzmCLTR0ujTwpnAE1S9WwQ+4jYPjZ1HFs6pGMLBcr+YNDYi/bpU1Jqranw==",
+  "dgSpecHash": "IqEGxSRMR77HgyCjHOg5Q5W6qL7rmWNkBoVEZ2sZH5ToncTkm3BSvtRFB8/rKVLlnqhZDNgMpd2AIUqj50SjjQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\core\\CleanArchBloggingApp.Application\\CleanArchBloggingApp.Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\Core\\CleanArchBloggingApp.Application\\CleanArchBloggingApp.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\A\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\A\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\A\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\A\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\A\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "C:\\Users\\A\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\A\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\A\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\A\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\A\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

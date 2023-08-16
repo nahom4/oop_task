@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\core\\CleanArchBloggingApp.Application\\CleanArchBloggingApp.Application.csproj": {}
+    "c:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\Core\\CleanArchBloggingApp.Application\\CleanArchBloggingApp.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\core\\CleanArchBloggingApp.Application\\CleanArchBloggingApp.Application.csproj": {
+    "c:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\Core\\CleanArchBloggingApp.Application\\CleanArchBloggingApp.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\core\\CleanArchBloggingApp.Application\\CleanArchBloggingApp.Application.csproj",
+        "projectUniqueName": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\Core\\CleanArchBloggingApp.Application\\CleanArchBloggingApp.Application.csproj",
         "projectName": "CleanArchBloggingApp.Application",
-        "projectPath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\core\\CleanArchBloggingApp.Application\\CleanArchBloggingApp.Application.csproj",
+        "projectPath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\Core\\CleanArchBloggingApp.Application\\CleanArchBloggingApp.Application.csproj",
         "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\core\\CleanArchBloggingApp.Application\\obj\\",
+        "outputPath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\Core\\CleanArchBloggingApp.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,16 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

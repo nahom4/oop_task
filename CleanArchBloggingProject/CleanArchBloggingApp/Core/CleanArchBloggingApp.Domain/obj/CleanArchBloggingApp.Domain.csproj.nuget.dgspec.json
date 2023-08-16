@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\core\\CleanArchBloggingApp.Domain\\CleanArchBloggingApp.Domain.csproj": {}
+    "c:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\Core\\CleanArchBloggingApp.Domain\\CleanArchBloggingApp.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\core\\CleanArchBloggingApp.Domain\\CleanArchBloggingApp.Domain.csproj": {
+    "c:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\Core\\CleanArchBloggingApp.Domain\\CleanArchBloggingApp.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\core\\CleanArchBloggingApp.Domain\\CleanArchBloggingApp.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\Core\\CleanArchBloggingApp.Domain\\CleanArchBloggingApp.Domain.csproj",
         "projectName": "CleanArchBloggingApp.Domain",
-        "projectPath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\core\\CleanArchBloggingApp.Domain\\CleanArchBloggingApp.Domain.csproj",
+        "projectPath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\Core\\CleanArchBloggingApp.Domain\\CleanArchBloggingApp.Domain.csproj",
         "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\core\\CleanArchBloggingApp.Domain\\obj\\",
+        "outputPath": "c:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\Core\\CleanArchBloggingApp.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,16 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

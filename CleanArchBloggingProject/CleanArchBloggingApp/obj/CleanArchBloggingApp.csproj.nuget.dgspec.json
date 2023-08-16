@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\CleanArchBloggingApp.csproj": {}
+    "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\CleanArchBloggingApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\CleanArchBloggingApp.csproj": {
+    "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\CleanArchBloggingApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\CleanArchBloggingApp.csproj",
+        "projectUniqueName": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\CleanArchBloggingApp.csproj",
         "projectName": "CleanArchBloggingApp",
-        "projectPath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\CleanArchBloggingApp.csproj",
+        "projectPath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\CleanArchBloggingApp.csproj",
         "packagesPath": "C:\\Users\\A\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingApp\\obj\\",
+        "outputPath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\A\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,16 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

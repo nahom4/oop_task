@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace CleanArchBloggingApp.Application.Persistence.Contracts
 {
-    public interface GenericIRepository<T>
+    public interface IGenericRepository<T>
     {
-     public Task<T> Get();
+     public Task<T> Get(int Id);
      public Task<IReadOnlyList<T>> GetAll();
 
-     public Task<T> Create();
+     public Task<T> Create(T entity);
 
-     public Task<T> Update();
+     public Task<T> Update(T entity);
 
-     public Task<T> Delete();
+     public Task<T> Delete(T entity);
 
 
     }
