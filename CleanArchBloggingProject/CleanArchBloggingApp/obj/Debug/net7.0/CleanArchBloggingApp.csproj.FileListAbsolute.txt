@@ -37,3 +37,5 @@ C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingProject\CleanArchBlogging
 C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingProject\CleanArchBloggingApp\bin\Debug\net7.0\MediatR.dll
 C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingProject\CleanArchBloggingApp\bin\Debug\net7.0\MediatR.Contracts.dll
 C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingProject\CleanArchBloggingApp\bin\Debug\net7.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingProject\CleanArchBloggingApp\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\A\Desktop\projec_phase_tasks\CleanArchBloggingProject\CleanArchBloggingApp\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll

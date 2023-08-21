@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2XrL93XxR7VTduV71NLj5XdJFf0c8638Dv1X0v/O3BsyTY/fIKSV9b1ds3H6bOrcTyhL12RgZJrPzL0Wh349+g==",
+  "dgSpecHash": "sVn5+deugu+VU9TEpIMq+eBSBBUWHGq7CjxK2NRhn8iDSv7V0R+Z6XT35tncpptk5Tyd3GXJCkFUKPTIl+IKJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\A\\Desktop\\projec_phase_tasks\\CleanArchBloggingProject\\CleanArchBloggingApp\\CleanArchBloggingApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\A\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\A\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\A\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
+    "C:\\Users\\A\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.7.1\\fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
     "C:\\Users\\A\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\A\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\A\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",

@@ -15,6 +15,8 @@ namespace CleanArchBloggingApp.Application.Persistence.Contracts
      public Task<T> Update(T entity);
 
      public Task<T> Delete(T entity);
+     public Task<bool> Exists(int id);
+
 
 
     }
